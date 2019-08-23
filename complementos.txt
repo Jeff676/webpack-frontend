@@ -1,0 +1,1 @@
+webpack webpack-cli webpack-dev-middleware webpack-dev-server @babel/core babel-loader css-loader file-loader html-webpack-plugin vue-loader vue-style-loader vue-template-compiler 
