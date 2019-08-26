@@ -1,13 +1,12 @@
 import Vue from 'vue'
 import router from './routes/router.js'
 import App from './app.vue'
-import BootstrapVue from 'bootstrap-vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
+// custom styles
 import './styles/main.css'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 //FontAwesome
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -19,7 +18,10 @@ import { far } from '@fortawesome/free-regular-svg-icons'
 library.add(fab, fas, far)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
-Vue.use(BootstrapVue)
+// vuetify pluggin
+import vuetify from './plugins/vuetify' // path to vuetify export
+
+Vue.use(vuetify)
 Vue.use(VueAxios, axios)
 
   function component() {
@@ -33,5 +35,6 @@ document.body.appendChild(component());
 
 new Vue({
 router,
+vuetify,
 render: h => h(App),
 }).$mount('#app')

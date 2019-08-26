@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
@@ -28,7 +29,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Ejemplo Webpack Awesome',
     }),
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new VuetifyLoaderPlugin()
    ],
   module: {
     rules: [
@@ -44,18 +46,42 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
-        use: [
-          'vue-style-loader',
-          'css-loader'
-        ]
+         test: /\.css$/i,
+         use: [
+           'vue-style-loader',
+           'css-loader'
+           // invbestigar que significa 
+           // options: {
+           //      import: true,
+           //   },
+         ]
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+       test: /\.(sass|scss)$/,
+       use: [
+         'style-loader', // creates style nodes from JS strings
+         'css-loader', // translates CSS into CommonJS
+         'sass-loader', // compiles Sass to CSS, using Node Sass by default
+       ],
+     },
+     {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
-          'file-loader',
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
         ]
-      }
+     },
+     {
+       test: /\.(png|svg|jpg|gif)$/,
+       use: [
+         'file-loader',
+       ]
+     }
     ]
   }
 }

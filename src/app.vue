@@ -1,13 +1,12 @@
 <template>
-  <!-- <b-container fluid>
-    <b-row align-h="center" class="text-center">
-      <b-col align-self="center" cols="4">
-         <router-link class="texto-rojo" to="/">Home </router-link> |
-        <router-link to="/about"> About</router-link>
-      </b-col>
-    </b-row>
-  </b-container> -->
-  <router-view/>
+  <v-app id="app">
+     <v-container>
+      <v-alert type="success">I'm a basic alert component.</v-alert>
+      <!-- <router-link class="texto-rojo" to="/">Home </router-link> |
+      <router-link to="/about"> About</router-link> -->
+      <router-view/>
+      </v-container>
+   </v-app>
 </template>
 
 <script>
@@ -15,7 +14,7 @@
 export default {
   data () {
     return {
-    
+
     }
   }
 }
