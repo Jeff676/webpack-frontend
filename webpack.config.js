@@ -27,7 +27,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Ejemplo Webpack Awesome',
+      title: 'Alfamedica Venezuela',
     }),
     new VueLoaderPlugin(),
     new VuetifyLoaderPlugin()
@@ -49,8 +49,8 @@ module.exports = {
          test: /\.css$/i,
          use: [
            'vue-style-loader',
-           'css-loader'
-           // invbestigar que significa 
+           'css-loader',
+           // invbestigar que significa
            // options: {
            //      import: true,
            //   },
@@ -77,7 +77,7 @@ module.exports = {
         ]
      },
      {
-       test: /\.(png|svg|jpg|gif)$/,
+       test: /\.(png|svg|jpg|gif|jpeg)$/,
        use: [
          'file-loader',
        ]

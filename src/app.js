@@ -5,8 +5,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
-// custom styles
-import './styles/main.css'
+
 
 //FontAwesome
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -20,8 +19,11 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 // vuetify pluggin
 import vuetify from './plugins/vuetify' // path to vuetify export
-
 Vue.use(vuetify)
+
+// custom styles
+import './styles/main.css'
+
 Vue.use(VueAxios, axios)
 
   function component() {
