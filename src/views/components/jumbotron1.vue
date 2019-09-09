@@ -9,7 +9,7 @@
       </b-col>
 
       <b-col>
-        <font-awesome-icon :icon="['fab', 'facebook']" />
+        <font-awesome-icon :icon="['fab', 'whatsapp']" />
       </b-col>
 
       <b-col>

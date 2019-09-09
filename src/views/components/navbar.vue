@@ -1,25 +1,18 @@
 <template lang="html">
   <!-- NavBar -->
-<b-navbar toggleable="lg" type="dark" variant="warning" sticky>
-  <b-navbar-brand href="#">NavBar</b-navbar-brand>
+  <div>
+    <v-toolbar>
+      <v-toolbar-title>Title</v-toolbar-title>
 
-  <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <div class="flex-grow-1"></div>
 
-  <b-collapse id="nav-collapse" is-nav>
-
-    <!-- Right aligned nav items -->
-    <b-navbar-nav class="ml-auto">
-
-      <b-navbar-nav>
-        <b-nav-item href="#">Inicio</b-nav-item>
-        <b-nav-item href="#">Quienes Somos</b-nav-item>
-        <b-nav-item href="#">Productos</b-nav-item>
-        <b-nav-item href="#">Contacto</b-nav-item>
-      </b-navbar-nav>
-
-    </b-navbar-nav>
-  </b-collapse>
-</b-navbar>
+      <v-toolbar-items>
+        <v-btn text>Link 1</v-btn>
+        <v-btn text>Link 2</v-btn>
+        <v-btn text>Link 3</v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
+  </div>
   <!-- Nabvar end -->
 </template>
 

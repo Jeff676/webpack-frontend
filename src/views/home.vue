@@ -36,6 +36,8 @@
 
       <products img="jeringa5.jpg" product="Jeringas" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."></products>
 
+      <v-divider class="my-8"></v-divider>
+
       <contact></contact>
 
       <!-- <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"></v-parallax> -->
@@ -48,11 +50,6 @@
 
 
 
-     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </v-container>
    </div>
